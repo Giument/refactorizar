@@ -30,17 +30,22 @@ public class Circunferencia {
                 final double name = 2*getRadio();
 	        System.out.println("Di�metro: " + name);
 	        System.out.println("Color: " + color);
-	        double area = 2 * PI * getRadio() * getRadio();
+	        double area = area();
 	        System.out.println(area);
 	}
+
+    public double area() {
+        double area = 2 * PI * getRadio() * getRadio();
+        return area;
+    }
      
     
 
-	public boolean esIgual (Circunferencia otro, boolean conDecimales)
+	public boolean esIgual (boolean considerarDecimales, Circunferencia otro)
 	{
 	        double radio1 = this.getRadio();
 	        double radio2 = otro.getRadio();
-	        if (conDecimales)
+	        if (considerarDecimales)
 	        {
 	            if (radio1 == radio2) 
 	              return true;
