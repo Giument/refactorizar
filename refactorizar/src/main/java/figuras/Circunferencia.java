@@ -16,6 +16,8 @@ public class Circunferencia {
         this.radio = radio;
     }
 	private double radio;
+        private String color;
+        private static final double PI = 3.1416;
 
 	public Circunferencia(double radio)
 	    	{
@@ -24,13 +26,15 @@ public class Circunferencia {
 
 	    	public void imprimir()
 	    	{
-        color = "rojo";
-	        System.out.println("Di�metro: " + 2*getRadio());
+                color = "rojo";
+                final double name = 2*getRadio();
+	        System.out.println("Di�metro: " + name);
 	        System.out.println("Color: " + color);
-	        double area = 2 * 3.1416 * getRadio() * getRadio();
+	        double area = 2 * PI * getRadio() * getRadio();
 	        System.out.println(area);
 	}
-    private String color;
+     
+    
 
 	public boolean esIgual (Circunferencia otro, boolean conDecimales)
 	{
